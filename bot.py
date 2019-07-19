@@ -182,7 +182,7 @@ def command_love(m): # Definimos una función que resuleva lo que necesitemos.
         2:"Elsa Pataky",
         3:"Charlize Theron",
         4:"Anna Simon",
-        5:"Sofia Vergara",
+        5:"eugenia alonso",
         6:"Miguel Quiros",
         }
         msg = frases[numero]
