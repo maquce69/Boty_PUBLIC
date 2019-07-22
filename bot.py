@@ -19,7 +19,7 @@ from subprocess import check_output
 reload(sys) 
 sys.setdefaultencoding("utf-8")
 
-TOKEN = '148466216:AAF0gxxNJ0smlF3Mpr1SDXuYg7aMXEL8l1Y' # Nuestro tokken del bot (el que @BotFather nos dió).
+TOKEN = 
 administrador = 10721401 # Este es mi ID, vosotros poned el vuestro
 usuarios = [line.rstrip('\n') for line in open('usuarios.txt')] # Cargamos la lista de usuarios.
 bot = telebot.TeleBot(TOKEN) # Creamos el objeto de nuestro bot.
