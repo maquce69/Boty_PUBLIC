@@ -19,7 +19,7 @@ from subprocess import check_output
 reload(sys) 
 sys.setdefaultencoding("utf-8")
 
-TOKEN = '148466216:AAF0gxxNJ0smlF3Mpr1SDXuYg7aMXEL8l1Y' # Nuestro tokken del bot (el que @BotFather nos dió).
+TOKEN = '148466216:AAGCWW12qa0Y17gpF8H8TeyQeoobpNfaSLc' # Nuestro tokken del bot (el que @BotFather nos dió).
 administrador = 10721401 # Este es mi ID, vosotros poned el vuestro
 usuarios = [line.rstrip('\n') for line in open('usuarios.txt')] # Cargamos la lista de usuarios.
 bot = telebot.TeleBot(TOKEN) # Creamos el objeto de nuestro bot.
@@ -41,7 +41,6 @@ def listener(messages):
             print mensaje # Imprimimos el mensaje en la terminal, que nunca viene mal :)
         
 bot.set_update_listener(listener) # Así, le decimos al bot que utilice como función escuchadora nuestra función 'listener' declarada arriba.
-
 
 
 #############################################
@@ -151,13 +150,8 @@ def command_tiempo(m):
 @bot.message_handler(commands=['web']) 
 def command_web(m): 
     cid = m.chat.id
-    milist="Canales Telegram"
-    archi=open('canales.txt','r')
-    for linea in archi:
-        print linea
-        milist=milist+linea
-    archi.close() 
-    bot.send_message( cid,milist) 
+    # 'Visita http://quiros.netai.net/'
+    bot.send_message( cid,"pon tu web" ) 
 
 @bot.message_handler(commands=["chuckjoke",])
 def chuck_joke_handler(message):
