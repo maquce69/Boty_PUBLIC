@@ -14,12 +14,16 @@ import re
 import feedparser
 import time
 from subprocess import check_output
+from os import environ
 
-
+TELEGRAM_API_URL = "https://api.telegram.org/bot{}/{}"
+TELEGRAM_BOT_USERNAME = environ["TELEGRAM_BOT_USERNAME"]
+TELEGRAM_SECRET_URL = environ["TELEGRAM_SECRET_URL"]
+TELEGRAM_TOKEN = environ["TELEGRAM_TOKEN"]
+TOKEN = environ["TELEGRAM_TOKEN"]
 reload(sys) 
 sys.setdefaultencoding("utf-8")
 
-TOKEN = 
 administrador = 10721401 # Este es mi ID, vosotros poned el vuestro
 usuarios = [line.rstrip('\n') for line in open('usuarios.txt')] # Cargamos la lista de usuarios.
 bot = telebot.TeleBot(TOKEN) # Creamos el objeto de nuestro bot.
